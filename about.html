@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Portfolio - About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-2xl font-bold text-gray-800">Artist Name</a>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+          <a href="portfolio.html" class="text-gray-600 hover:text-gray-900">Portfolio</a>
+          <a href="collection.html" class="text-gray-600 hover:text-gray-900">Collection</a>
+          <a href="blog.html" class="text-gray-900 font-semibold">Blog</a>
+          <a href="contact.html" class="text-gray-600 hover:text-gray-900">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Off-canvas mobile menu -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+      <div class="flex justify-end p-4">
+        <button id="close-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="px-4 py-6 space-y-4">
+        <a href="index.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+          Home
+        </a>
+        <a href="about.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          About
+        </a>
+        <a href="portfolio.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          Portfolio
+        </a>
+        <a href="collection.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          Collection
+        </a>
+        <a href="#" class="flex items-center text-gray-900 font-semibold text-lg">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="contact.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Contact
+        </a>
+      </div>
+    </div>
+    <!-- Overlay for off-canvas menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gray-800 text-white">
+    <img src="https://source.unsplash.com/random/1600x400/?studio" alt="Artist studio" class="w-full h-96 object-cover opacity-50">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center max-w-2xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">About the Artist</h1>
+        <p class="text-lg md:text-xl">Discover the journey, passion, and vision behind my art and collection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">My Story</h2>
+          <p class="text-gray-600 mb-4">I'm Artist Name, a painter, sculptor, and avid art collector based in [City]. My work is driven by a deep connection to nature and the human experience, blending vibrant colors with intricate textures to evoke emotion. For over a decade, I've been creating art that speaks to both heart and mind.</p>
+          <p class="text-gray-600 mb-4">As a collector, I seek out pieces that challenge conventions and tell unique stories, from emerging artists to established names. My collection reflects my belief in art as a universal language, bridging cultures and eras.</p>
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Artist Statement</h3>
+          <p class="text-gray-600">My art explores the interplay of light, form, and emotion, drawing inspiration from the natural world and personal introspection. Each piece is a conversation—a moment captured, a feeling shared. As a collector, I aim to preserve and share works that push boundaries and inspire dialogue.</p>
+        </div>
+        <div>
+          <img src="https://source.unsplash.com/random/600x600/?artist" alt="Artist at work" class="w-full h-full object-cover rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Career Milestones</h2>
+      <div class="space-y-8">
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="md:w-1/4 text-gray-600 font-semibold">2025</div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-semibold text-gray-800">Solo Exhibition: Reflections</h3>
+            <p class="text-gray-600">Showcased a new series of paintings at [Gallery Name], exploring themes of memory and identity. The exhibition received critical acclaim in [Publication].</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="md:w-1/4 text-gray-600 font-semibold">2023</div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-semibold text-gray-800">Acquired Rare Piece</h3>
+            <p class="text-gray-600">Added a significant work by [Artist Name] to my collection, a pivotal moment in curating post-modern art.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="md:w-1/4 text-gray-600 font-semibold">2020</div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-semibold text-gray-800">First Major Commission</h3>
+            <p class="text-gray-600">Created a large-scale sculpture for [Institution], marking a turning point in my artistic career.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="md:w-1/4 text-gray-600 font-semibold">2018</div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-semibold text-gray-800">Began Collecting</h3>
+            <p class="text-gray-600">Started my art collection with a focus on emerging artists, laying the foundation for a diverse and vibrant portfolio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Influences Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Influences from My Collection</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto text-center mb-8">The works I collect inspire my own creations, offering new perspectives and techniques. Here are a few pieces that have shaped my artistic journey.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Influence 1 -->
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300/?modern-art" alt="Influence 1" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Vibrant Chaos by J. Smith</h3>
+            <p class="text-gray-600">This bold abstract piece taught me the power of color in conveying emotion.</p>
+            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Collection</a>
+          </div>
+        </div>
+        <!-- Influence 2 -->
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300/?landscape" alt="Influence 2" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Horizon Line by M. Lee</h3>
+            <p class="text-gray-600">Its minimalist approach inspired my exploration of negative space.</p>
+            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Collection</a>
+          </div>
+        </div>
+        <!-- Influence 3 -->
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300/?sculpture" alt="Influence 3" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Eternal Form by K. Patel</h3>
+            <p class="text-gray-600">This sculpture influenced my approach to three-dimensional textures.</p>
+            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-blue-600 text-white text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-4">Connect with My Art</h2>
+      <p class="text-lg mb-6">Explore my portfolio or collection, or reach out to discuss commissions and collaborations.</p>
+      <div class="space-x-4">
+        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-2 px-4 rounded">View Portfolio</a>
+        <a href="#" class="inline-block bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white font-semibold py-2 px-4 rounded">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Artist Name</h3>
+          <p class="text-gray-400">Creating and collecting art that inspires.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Portfolio</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Collection</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Connect</h3>
+          <div class="flex space-x-4">
+             <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-linkedin-in fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-whatsapp fa-lg"></i>
+                                </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+        <p class="text-gray-400">&copy; 2025 Artist Name. All rights reserved.</p>
+        <div class="mt-2">
+          <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+       // Off-canvas Menu Script
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenuOverlay.classList.remove('hidden');
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenuOverlay.classList.add('hidden');
+    });
+
+    mobileMenuOverlay.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenuOverlay.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
