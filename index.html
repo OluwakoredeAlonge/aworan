@@ -3,11 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of a renowned artist, art collector, prestigious tutor, and Head of Department at a leading university. Explore original creations, curated collections, and academic insights.">
+  <meta name="keywords" content="artist portfolio, art collection, contemporary art, art tutor, university head of department">
   <title>Artist Portfolio - Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+            slideUp: 'slideUp 0.5s ease-in-out',
+            slideDown: 'slideDown 0.5s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(50%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideDown: {
+              '0%': { transform: 'translateY(0)', opacity: '1' },
+              '100%': { transform: 'translateY(50%)', opacity: '0' },
+            },
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100 font-sans antialiased">
   <!-- Navigation -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,12 +45,12 @@
           <a href="index.html" class="text-2xl font-bold text-gray-800">Artist Name</a>
         </div>
         <div class="hidden md:flex space-x-8">
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold">Home</a>
-          <a href="about.html" class="text-gray-600 hover:text-gray-900">About</a>
-          <a href="portfolio.html" class="text-gray-600 hover:text-gray-900">Portfolio</a>
-          <a href="collection.html" class="text-gray-600 hover:text-gray-900">Collection</a>
-          <a href="blog.html" class="text-gray-600 ">Blog</a>
-          <a href="contact.html" class="text-gray-600 hover:text-gray-900">Contact</a>
+          <a href="index.html" class="text-gray-900 font-bold">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-gray-900 font-semibold">About</a>
+          <a href="portfolio.html" class="text-gray-600 hover:text-gray-900 font-semibold">Portfolio</a>
+          <a href="collection.html" class="text-gray-600 hover:text-gray-900 font-semibold">Collection</a>
+          <a href="blog.html" class="text-gray-600 hover:text-gray-900 font-semibold">Blog</a>
+          <a href="contact.html" class="text-gray-600 hover:text-gray-900 font-semibold">Contact</a>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden">
@@ -43,7 +72,7 @@
         </button>
       </div>
       <div class="px-4 py-6 space-y-4">
-        <a href="index.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <a href="index.html" class="flex items-center text-gray-900 font-bold text-lg">
           <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
           </svg>
@@ -67,7 +96,7 @@
           </svg>
           Collection
         </a>
-        <a href="#" class="flex items-center text-gray-900 font-semibold text-lg">
+        <a href="blog.html" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
           <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
           </svg>
@@ -86,59 +115,81 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative bg-gray-800 text-white">
-    <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Hero artwork" class="w-full h-[600px] object-cover opacity-50">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <div class="text-center max-w-2xl mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to My Art World</h1>
-        <p class="text-lg md:text-xl mb-6">Creator and collector of unique, inspiring artworks.</p>
+  <section class="relative bg-gray-800 text-white overflow-hidden">
+    <img src="https://via.placeholder.com/1920x800/4a5568/ffffff?text=Hero+Artwork" alt="Hero artwork showcasing abstract art" class="w-full h-[600px] object-cover opacity-60 transform scale-105 transition-transform duration-1000 ease-out">
+    <div class="absolute inset-0 flex items-center justify-center animate-fadeIn">
+      <div class="text-center max-w-3xl mx-auto px-4">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">Welcome to My Art World</h1>
+        <p class="text-xl md:text-2xl mb-8 font-light">Creator, collector, prestigious tutor, and Head of Art Department at University Name.</p>
         <div class="space-x-4">
-          <a href="portfolio.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Explore Portfolio</a>
-          <a href="collection.html" class="inline-block bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white font-semibold py-2 px-4 rounded">View Collection</a>
+          <a href="portfolio.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">Explore Portfolio</a>
+          <a href="collection.html" class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">View Collection</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Intro Section -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">About the Artist</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">I'm an artist and collector passionate about blending creativity with curation. My work explores themes of nature and human emotion, while my collection celebrates diverse voices in contemporary art.</p>
-      <a href="about.html" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out">Learn More About Me</a>
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">About the Artist</h2>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8">As a passionate artist and discerning collector, I blend creativity with curation to explore themes of nature, human emotion, and cultural narratives. My collection celebrates diverse voices in contemporary art. Additionally, as Head of the Art Department at University Name and a prestigious tutor, I bring academic excellence and mentorship to aspiring artists, fostering the next generation of creative minds.</p>
+      <a href="about.html" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">Learn More About Me</a>
+    </div>
+  </section>
+
+  <!-- Academic Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">Academic Excellence</h2>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8">Leading the Art Department at University Name, I oversee innovative programs and mentor students in advanced artistic techniques. My tutoring services have guided numerous artists to professional success, combining theoretical knowledge with practical expertise.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <i class="fas fa-graduation-cap text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Department Leadership</h3>
+          <p class="text-gray-600">Shaping curriculum and fostering artistic innovation.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <i class="fas fa-chalkboard-teacher text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Prestigious Tutoring</h3>
+          <p class="text-gray-600">Personalized guidance for aspiring artists.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <i class="fas fa-award text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Awards & Recognition</h3>
+          <p class="text-gray-600">Honored for contributions to art education.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Featured Artwork Section -->
-  <section class="py-16 bg-gray-100">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Creations</h2>
+      <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center">Featured Creations</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Artwork 1 -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Artwork 1" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Serenity Over the Horizon</h3>
-            <p class="text-gray-600">Oil on canvas, 2025</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Artwork+1" alt="Serenity Over the Horizon - Oil on canvas" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Serenity Over the Horizon</h3>
+            <p class="text-gray-600 mb-4">Oil on canvas, 2025</p>
+            <a href="portfolio.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
-        <!-- Artwork 2 -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Artwork 2" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Echoes of Time</h3>
-            <p class="text-gray-600">Mixed media, 2024</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Artwork+2" alt="Echoes of Time - Mixed media" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Echoes of Time</h3>
+            <p class="text-gray-600 mb-4">Mixed media, 2024</p>
+            <a href="portfolio.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
-        <!-- Artwork 3 -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Artwork 3" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Form in Motion</h3>
-            <p class="text-gray-600">Sculpture, 2023</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Artwork+3" alt="Form in Motion - Sculpture" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Form in Motion</h3>
+            <p class="text-gray-600 mb-4">Sculpture, 2023</p>
+            <a href="portfolio.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
       </div>
@@ -146,35 +197,32 @@
   </section>
 
   <!-- Featured Collection Section -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">From My Collection</h2>
+      <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center">From My Collection</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Collection Item 1 -->
-        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Collection 1" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Untitled by J. Doe</h3>
-            <p class="text-gray-600">Acrylic on canvas, 2020</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Collection+1" alt="Untitled by J. Doe - Acrylic on canvas" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Untitled by J. Doe</h3>
+            <p class="text-gray-600 mb-4">Acrylic on canvas, 2020</p>
+            <a href="collection.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
-        <!-- Collection Item 2 -->
-        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Collection 2" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">The Wanderer</h3>
-            <p class="text-gray-600">Watercolor, 2019</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Collection+2" alt="The Wanderer - Watercolor" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">The Wanderer</h3>
+            <p class="text-gray-600 mb-4">Watercolor, 2019</p>
+            <a href="collection.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
-        <!-- Collection Item 3 -->
-        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
-          <img src="https://placeholder.pics/svg/50x50/d4af37/001f3f" alt="Collection 3" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Fragmented Dreams</h3>
-            <p class="text-gray-600">Digital art, 2021</p>
-            <a href="#" class="mt-2 inline-block text-blue-600 hover:text-blue-800">View Details</a>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+          <img src="https://via.placeholder.com/600x400/4a5568/ffffff?text=Collection+3" alt="Fragmented Dreams - Digital art" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fragmented Dreams</h3>
+            <p class="text-gray-600 mb-4">Digital art, 2021</p>
+            <a href="collection.html" class="inline-block text-blue-600 hover:text-blue-800 font-medium">View Details</a>
           </div>
         </div>
       </div>
@@ -182,62 +230,74 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="py-16 bg-blue-600 text-white text-center">
+  <section class="py-20 bg-blue-600 text-white text-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold mb-4">Discover the Art</h2>
-      <p class="text-lg mb-6">Explore my creations and curated collection, or get in touch for commissions and inquiries.</p>
-      <a href="contact.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-2 px-4 rounded">Contact Me</a>
+      <h2 class="text-4xl font-bold mb-6">Discover the Art</h2>
+      <p class="text-xl mb-8">Explore my original creations, curated collections, or inquire about tutoring and commissions.</p>
+      <a href="contact.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">Contact Me</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="bg-gray-800 text-white relative">
+    <!-- Minimal Footer Bar -->
+    <div class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <p class="text-gray-400 text-sm">Developed by Korede Alonge</p>
+      <button id="expand-footer-button" class="flex items-center text-gray-400 hover:text-white font-semibold text-sm focus:outline-none">
+        Extras & Resources
+        <i class="fas fa-chevron-up ml-2 transform transition-transform duration-300"></i>
+      </button>
+    </div>
+    <!-- Expanded Footer Content -->
+    <div id="expanded-footer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 hidden animate-slideUp bg-gray-800 absolute bottom-14 left-0 right-0">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-lg font-semibold mb-4">Artist Name</h3>
-          <p class="text-gray-400">Creating and collecting art that inspires.</p>
+          <h3 class="text-xl font-semibold mb-4">Artist Name</h3>
+          <p class="text-gray-400 mb-4">Creating, collecting, and teaching art that inspires and educates.</p>
+          <p class="text-gray-400">Head of Art Department, University Name</p>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Portfolio</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Collection</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-200">Portfolio</a></li>
+            <li><a href="collection.html" class="text-gray-400 hover:text-white transition duration-200">Collection</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-200">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-4">Connect</h3>
-          <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-instagram fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-twitter fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-linkedin-in fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-whatsapp fa-lg"></i>
-                                </a>
+          <h3 class="text-xl font-semibold mb-4">Connect</h3>
+          <div class="flex space-x-6">
+            <a href="#" class="text-white hover:text-gray-300 transition duration-200">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#" class="text-white hover:text-gray-300 transition duration-200">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#" class="text-white hover:text-gray-300 transition duration-200">
+              <i class="fab fa-linkedin-in fa-2x"></i>
+            </a>
+            <a href="#" class="text-white hover:text-gray-300 transition duration-200">
+              <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div class="mt-8 border-t border-gray-700 pt-4 text-center">
-        <p class="text-gray-400">&copy; 2025 Artist Name. All rights reserved.</p>
+      <div class="mt-10 border-t border-gray-700 pt-6 text-center">
+        <p class="text-gray-400">Explore more resources or connect with the art community.</p>
+        <p class="text-gray-400 text-sm">&copy; 2025 Artist Name. All rights reserved.</p>
         <div class="mt-2">
-          <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
-          <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Use</a>
+          <a href="#" class="text-gray-400 hover:text-white mx-3 transition duration-200">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white mx-3 transition duration-200">Terms of Use</a>
+          <a href="#" class="text-gray-400 hover:text-white mx-3 transition duration-200">Art Resources</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Scripts -->
   <script>
-       // Off-canvas Menu Script
+    // Mobile Menu Script
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const closeMenuButton = document.getElementById('close-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -256,6 +316,28 @@
     mobileMenuOverlay.addEventListener('click', () => {
       mobileMenu.classList.add('translate-x-full');
       mobileMenuOverlay.classList.add('hidden');
+    });
+
+    // Footer Expand/Collapse Script
+    const expandFooterButton = document.getElementById('expand-footer-button');
+    const expandedFooter = document.getElementById('expanded-footer');
+    const chevronIcon = expandFooterButton.querySelector('i');
+
+    expandFooterButton.addEventListener('click', () => {
+      if (expandedFooter.classList.contains('hidden')) {
+        expandedFooter.classList.remove('hidden', 'animate-slideDown');
+        expandedFooter.classList.add('animate-slideUp');
+        chevronIcon.classList.remove('fa-chevron-up');
+        chevronIcon.classList.add('fa-chevron-down');
+      } else {
+        expandedFooter.classList.remove('animate-slideUp');
+        expandedFooter.classList.add('animate-slideDown');
+        setTimeout(() => {
+          expandedFooter.classList.add('hidden');
+        }, 500); // Match duration of slideDown animation
+        chevronIcon.classList.remove('fa-chevron-down');
+        chevronIcon.classList.add('fa-chevron-up');
+      }
     });
   </script>
 </body>
