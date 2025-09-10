@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased flex flex-col md:flex-row min-h-screen">
+  <!-- Dashboard Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50 md:hidden">
+    <div class="px-4 flex justify-between items-center h-16">
+      <a href="#" class="text-2xl font-bold text-gray-800">Artist Dashboard</a>
+      <button id="mobile-sidebar-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar"
+    class="fixed md:static top-0 left-0 h-screen md:h-auto md:flex md:flex-col w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-40 md:translate-x-0 md:min-h-screen md:self-stretch overflow-y-auto">
+    <div class="flex justify-between items-center h-16 px-4 border-b md:hidden">
+      <span class="font-bold text-gray-700">Menu</span>
+      <button id="close-sidebar-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="px-4 py-6 space-y-4">
+      <a href="#" data-section="profile"
+        class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <i class="fas fa-user mr-2"></i> Profile
+      </a>
+      <a href="portfolio.html" data-section="portfolios"
+        class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <i class="fas fa-images mr-2"></i> Portfolios
+      </a>
+      <a href="collection.html" data-section="collections"
+        class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <i class="fas fa-archive mr-2"></i> Collections
+      </a>
+      <a href="blog.html" data-section="blog" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <i class="fas fa-blog mr-2"></i> Blog
+      </a>
+      <a href="#" class="flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium">
+        <i class="fas fa-sign-out-alt mr-2"></i> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30 md:hidden"></div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-4 md:p-8 overflow-y-auto">
+    <!-- Profile Section -->
+    <section id="profile" class="dashboard-section">
+      <h2 class="text-3xl font-bold mb-4">Manage Profile</h2>
+      <form class="space-y-4">
+        <div>
+          <div>
+            <label for="about" class="block text-sm font-medium text-gray-700">About the artist</label>
+            <textarea id="about" rows="5"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">I'm Artist Name, a painter, sculptor, art collector, and Head of the Art Department at University Name, based in [City]. My work is driven by a deep connection to nature and the human experience, blending vibrant colors with intricate textures to evoke emotion. For over a decade, I've created art that speaks to both heart and mind, while mentoring aspiring artists as a prestigious tutor.
+
+As a collector, I seek out pieces that challenge conventions and tell unique stories, from emerging talents to established names. My collection reflects my belief in art as a universal language, bridging cultures and eras. As an academic leader, I shape innovative curricula and guide students to professional success, combining theoretical insight with practical expertise.</textarea>
+            <p class="text-gray-500 text-sm mt-1">0/500 characters</p>
+          </div>
+          <div>
+            <label for="academic-excellence" class="block text-sm font-medium text-gray-700">Academic-Excellence</label>
+            <textarea id="academic-excellence" rows="5"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">I'm Artist Name, a painter, sculptor, art collector, and Head of the Art Department at University Name, based in [City]. My work is driven by a deep connection to nature and the human experience, blending vibrant colors with intricate textures to evoke emotion. For over a decade, I've created art that speaks to both heart and mind, while mentoring aspiring artists as a prestigious tutor.
+
+As a collector, I seek out pieces that challenge conventions and tell unique stories, from emerging talents to established names. My collection reflects my belief in art as a universal language, bridging cultures and eras. As an academic leader, I shape innovative curricula and guide students to professional success, combining theoretical insight with practical expertise.</textarea>
+            <p class="text-gray-500 text-sm mt-1">0/500 characters</p>
+          </div>
+          <label for="story" class="block text-sm font-medium text-gray-700">My Story</label>
+          <textarea id="story" rows="5"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">I'm Artist Name, a painter, sculptor, art collector, and Head of the Art Department at University Name, based in [City]. My work is driven by a deep connection to nature and the human experience, blending vibrant colors with intricate textures to evoke emotion. For over a decade, I've created art that speaks to both heart and mind, while mentoring aspiring artists as a prestigious tutor.
+
+As a collector, I seek out pieces that challenge conventions and tell unique stories, from emerging talents to established names. My collection reflects my belief in art as a universal language, bridging cultures and eras. As an academic leader, I shape innovative curricula and guide students to professional success, combining theoretical insight with practical expertise.</textarea>
+          <p class="text-gray-500 text-sm mt-1">0/500 characters</p>
+        </div>
+        <div>
+          <label for="statement" class="block text-sm font-medium text-gray-700">Artist & Educator Statement</label>
+          <textarea id="statement" rows="5"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">My art explores the interplay of light, form, and emotion, drawing inspiration from the natural world and personal introspection. Each piece is a conversation—a moment captured, a feeling shared. As a collector, I preserve and share works that push boundaries and inspire dialogue. As an educator, I foster creativity and critical thinking, empowering students to find their unique artistic voice.</textarea>
+          <p class="text-gray-500 text-sm mt-1">0/500 characters</p>
+        </div>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save Changes</button>
+      </form>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Career & Academic Milestones</h3>
+          <div class="space-y-4 mb-4">
+            <div>
+              <label for="milestone-year" class="block text-sm font-medium text-gray-700">Year</label>
+              <input type="text" id="milestone-year" placeholder="e.g., 2025"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+            </div>
+            <div>
+              <label for="milestone-title" class="block text-sm font-medium text-gray-700">Title</label>
+              <input type="text" id="milestone-title" placeholder="e.g., Solo Exhibition: Reflections"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+            </div>
+            <div>
+              <label for="milestone-content" class="block text-sm font-medium text-gray-700">Content</label>
+              <textarea id="milestone-content" rows="4"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600"
+                placeholder="Describe the milestone..."></textarea>
+              <p class="text-gray-500 text-sm mt-1">0/500 characters</p>
+            </div>
+            <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add
+              Milestone</button>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2025</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">Solo Exhibition: Reflections</h3>
+                <p class="text-gray-600">Showcased a new series of paintings at [Gallery Name], exploring themes of
+                  memory and identity. The exhibition received critical acclaim in [Publication].</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2024</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">Appointed Head of Art Department</h3>
+                <p class="text-gray-600">Took leadership of the Art Department at University Name, implementing
+                  innovative programs and mentoring students in advanced artistic techniques.</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2023</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">Acquired Rare Piece</h3>
+                <p class="text-gray-600">Added a significant work by [Artist Name] to my collection, a pivotal moment in
+                  curating post-modern art.</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2021</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">Launched Prestigious Tutoring Program</h3>
+                <p class="text-gray-600">Established a mentorship program for aspiring artists, guiding numerous
+                  students to professional success through personalized instruction.</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2020</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">First Major Commission</h3>
+                <p class="text-gray-600">Created a large-scale sculpture for [Institution], marking a turning point in
+                  my artistic career.</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-start bg-white p-4 rounded-lg shadow">
+              <div class="md:w-1/4 text-gray-600 font-semibold">2018</div>
+              <div class="md:w-3/4">
+                <h3 class="text-lg font-semibold text-gray-800">Began Collecting</h3>
+                <p class="text-gray-600">Started my art collection with a focus on emerging artists, laying the
+                  foundation for a diverse and vibrant portfolio.</p>
+                <button class="text-blue-600 hover:text-blue-800 mt-2">Edit</button>
+                <button class="text-red-600 hover:text-red-800 mt-2 ml-2">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Portfolios Section -->
+    <section id="portfolios" class="dashboard-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Manage Portfolios</h2>
+      <form class="space-y-4 mb-8">
+        <input type="text" placeholder="Title"
+          class="block w-full border rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+        <input type="text" placeholder="Medium"
+          class="block w-full border rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+        <input type="text" placeholder="Year"
+          class="block w-full border rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+        <input type="file"
+          class="block w-full border rounded-md shadow-sm p-2 focus:ring-blue-600 focus:border-blue-600">
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Portfolio</button>
+      </form>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="dashboard-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Manage Collections</h2>
+      <!-- Similar form as above -->
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="dashboard-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Manage Blog</h2>
+      <!-- Blog management form -->
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    const dashboardLinks = document.querySelectorAll('.dashboard-link');
+    const dashboardSections = document.querySelectorAll('.dashboard-section');
+    const mobileSidebarButton = document.getElementById('mobile-sidebar-button');
+    const closeSidebarButton = document.getElementById('close-sidebar-button');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    dashboardLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href !== '#') {
+          // Allow navigation for links with a valid href (e.g., index.html)
+          window.location.href = href;
+          return;
+        }
+        e.preventDefault(); // Prevent default only for section toggling
+        const sectionId = link.getAttribute('data-section');
+        dashboardSections.forEach(section => section.classList.add('hidden'));
+        if (sectionId) document.getElementById(sectionId).classList.remove('hidden');
+        if (window.innerWidth < 768) {
+          sidebar.classList.add('-translate-x-full');
+          sidebarOverlay.classList.add('hidden');
+        }
+      });
+    });
+
+    mobileSidebarButton.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebarButton.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // Default section
+    document.getElementById('profile').classList.remove('hidden');
+  </script>
+</body>
+
+</html>
